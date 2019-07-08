@@ -1,8 +1,8 @@
 {
-  "name": "tymfrontiers/php-event",
+  "name": "tymfrontiers-cdn/php-event",
   "description": "PHP event log",
   "keywords": ["event", "log","tym","frontiers"],
-  "homepage": "https://github.com/tymfrontiers/php-event",
+  "homepage": "https://github.com/tymfrontiers-cdn/php-event",
   "type": "library",
   "license": "MIT",
   "authors": [
