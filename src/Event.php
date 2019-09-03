@@ -34,18 +34,18 @@ class Event{
     global $session;
     // $session = ($session instanceof Session) ? $session instanceof Session : false;
 
-    $db_tbl_help = "1. Define [LOG_DB]: log storage database name.\r\n";
+    $db_tbl_help = "1. Define [MYSQL_LOG_DB]: log storage database name.\r\n";
     $db_tbl_help .= "2. Create database with defined name.\r\n";
     $db_tbl_help .= "3. Create table: [name]: event_log [fields]: id - int(11), user - char(16), title - char(35), info(text), _created - datetime >> defualt = datetime_stamp.";
 
     if( empty($filename) ){
       // record to database
-      if( !\defined('LOG_DB') ){
+      if( !\defined('MYSQL_LOG_DB') ){
         $this->errors['record'][] = [3,256,"Log database name not defined! \r\n {$db_tbl_help}",__FILE__,__LINE__];
         return false;
       }
 
-      self::$_db_name = LOG_DB;
+      self::$_db_name = MYSQL_LOG_DB;
       $location = ( !empty( $session->location ) && \is_object($session->location) ) ? $session->location : new Location();
       $info = $this->info;
       $info .= "\r\n#################################\r\n";
