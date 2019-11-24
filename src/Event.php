@@ -7,6 +7,8 @@ class Event{
   protected static $_primary_key='id';
   protected static $_db_name;
   protected static $_table_name='event_log';
+  protected static $_prop_type = [];
+  protected static $_prop_size = [];
 	protected static $_db_fields = ["id","user","channel","title","info","_created"];
 
   public $id;
